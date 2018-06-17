@@ -10,10 +10,7 @@ RSpec.describe AuthorizeApiRequest do
 	# Valid request subject
 	subject(:request_obj) { described_class.new(header) }
 
-	# Test Suite for AuthorizeApiRequest#call
-	# This is our entry point into the service class
 	describe '#call' do
-		# returns user object when request is valid
 		context 'when valid request' do
 			it 'returns user object' do
 				result = request_obj.call
@@ -50,7 +47,6 @@ RSpec.describe AuthorizeApiRequest do
 					expect { request_obj.call }
 					.to raise_error(
 						ExceptionHandler::InvalidToken,
-						/Signature has expired/
 					)
 				end
 			end

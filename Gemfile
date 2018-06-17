@@ -31,6 +31,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 #Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'jwt'
+gem 'active_model_serializers', '~>0.10'
+gem 'will_paginate', '~> 3.1.0'
 
 gem 'pry'
 gem 'pry-byebug'
@@ -39,6 +41,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 	gem 'rspec-rails', '~> 3.5'
+  gem 'faker'
 end
 
 group :development do
